@@ -33,7 +33,7 @@ env:
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
   ###############改名字##############
-  OPENWRT_NAME: hanwckf-52MHz
+  OPENWRT_NAME: HR3M-Boost
 
 jobs:
   build:
