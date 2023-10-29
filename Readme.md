@@ -1,3 +1,5 @@
+# 测试config不稳定!!!   
+
 # 借助 GitHub Actions 的 OpenWrt 在线自动编译.
 
 OpenWrt官方有过三种分区固件：OpenWrt stock layout、OpenWrt layout和OpenWrt U-Boot layout。
