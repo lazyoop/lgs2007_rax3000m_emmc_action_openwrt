@@ -22,7 +22,7 @@ on:
 #    - cron: 0 16 * * *
 
 env:
-  REPO_URL: https://github.com/lgs2007m/immortalwrt-mt798x-rax3000m-emmc
+  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: hanwckf/CMCC-RAX3000M-EMMC/.config
@@ -83,6 +83,7 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
+        sed -i -e '/bus-width = <8>;/ a\	cap-mmc-highspeed;' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
         sed -i 's/max-frequency = <26000000>/max-frequency = <52000000>/g' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
