@@ -33,7 +33,7 @@ env:
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
   ###############改名字##############
-  OPENWRT_NAME: HR3M-Boost
+  OPENWRT_NAME: RAX3000M
 
 jobs:
   build:
